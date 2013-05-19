@@ -31,5 +31,6 @@ class rvm::dependencies::centos {
   if ! defined(Package['libxslt-devel'])   { package { 'libxslt-devel':   ensure => present } }
   if ! defined(Package['readline-devel'])  { package { 'readline-devel':  ensure => present } }
   if ! defined(Package['patch'])           { package { 'patch':           ensure => present } }
-  if ! defined(Package['git'])             { package { 'git':             ensure => present } }
+#  if ! defined(Package['git'])             { package { 'git':             ensure => present } }
+  include git
 }
